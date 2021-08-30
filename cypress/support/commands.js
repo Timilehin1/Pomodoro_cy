@@ -23,3 +23,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('pomodoroUrl', ()=>{
+    cy.visit('https://pomofocus.io/')
+    Cypress.Cookies.preserveOnce('IDE','AHWqTUkYPoL-abhaZYn5aJ-32ak06CMwXsMIsS-cVle9ugCogr5Q8ckTkn_JWGbT')
+})
